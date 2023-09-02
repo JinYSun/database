@@ -12,7 +12,7 @@ df = pd.read_csv(url, dtype=str, encoding='utf-8')
 df1 = pd.read_csv(url1, dtype=str, encoding='utf-8')
 edited_df = st.data_editor(df1, num_rows="dynamic")
 st.download_button(
-    "⬇️ Download annotations as .csv", annotated.to_csv(), "annotated.csv", use_container_width=True
+    "⬇️ Download edited files as .csv", edited_df.to_csv(), "edited_df.csv", use_container_width=True
 )
 iframe(
         src="https://docs.google.com/spreadsheets/d/1Z0zd-5dF_HfqUaDDq4BWAOnsdlGCjkbTNwDZMBQ1dOY/edit#gid=0",
