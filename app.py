@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 
@@ -12,7 +11,13 @@ url1 = r"https://docs.google.com/spreadsheets/d/1YOEIg0nMTSPkAOr8wkqxQRLuUhys3-J
 df = pd.read_csv(url, dtype=str, encoding='utf-8')
 df1 = pd.read_csv(url1, dtype=str, encoding='utf-8')
 edited_df = st.data_editor(df1, num_rows="dynamic")
-
+st.download_button(
+    "⬇️ Download annotations as .csv", annotated.to_csv(), "annotated.csv", use_container_width=True
+)
+iframe(
+        src="https://docs.google.com/spreadsheets/d/1Z0zd-5dF_HfqUaDDq4BWAOnsdlGCjkbTNwDZMBQ1dOY/edit#gid=0",
+        height=600,
+    )
 import streamlit as st
 from streamlit_ketcher import st_ketcher
 
