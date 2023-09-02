@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
-from streamlit-ketcher import st_ketcher
+import streamlit_ketcher
+from streamlit_ketcher import st_ketcher
 
 # Page setup
 st.set_page_config(page_title="Non-fullere acceptor", page_icon="🔋", layout="wide")
