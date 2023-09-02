@@ -16,9 +16,6 @@ st.download_button(
     "⬇️ Download edited files as .csv", edited_df.to_csv(), "edited_df.csv", use_container_width=True
 )
 
-    
-
-
 molecule = st.text_input("Molecule", DEFAULT_MOL)
 smile_code = st_ketcher(molecule)
 st.markdown(f"Smile code: ``{smile_code}``")
