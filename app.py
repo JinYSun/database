@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from streamlit_ketcher import st_ketcher
 
 # Page setup
 st.set_page_config(page_title="Non-fullere acceptor", page_icon="🔋", layout="wide")
@@ -16,8 +17,7 @@ st.download_button(
 )
 
     
-import streamlit as st
-from streamlit_ketcher import st_ketcher
+
 
 molecule = st.text_input("Molecule", DEFAULT_MOL)
 smile_code = st_ketcher(molecule)
