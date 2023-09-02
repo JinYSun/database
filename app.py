@@ -1,4 +1,3 @@
-pip install streamlit_ketcher
 import streamlit as st
 import pandas as pd
 from streamlit_ketcher import st_ketcher
