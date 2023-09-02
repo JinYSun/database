@@ -12,5 +12,4 @@ url1 = r"https://docs.google.com/spreadsheets/d/1YOEIg0nMTSPkAOr8wkqxQRLuUhys3-J
 df = pd.read_csv(url, dtype=str, encoding='utf-8')
 df1 = pd.read_csv(url1, dtype=str, encoding='utf-8')
 edited_df = st.data_editor(df1, num_rows="dynamic")
-st.write(df1)
 
