@@ -14,12 +14,7 @@ edited_df = st.data_editor(df1, num_rows="dynamic")
 st.download_button(
     "⬇️ Download edited files as .csv", edited_df.to_csv(), "edited_df.csv", use_container_width=True
 )
-with left:
 
-    iframe(
-            src="https://docs.google.com/spreadsheets/d/1YOEIg0nMTSPkAOr8wkqxQRLuUhys3-J0I-KPEpmzPLw/edit?pli=1#gid=897935153",
-            height=600,
-        )
     
 import streamlit as st
 from streamlit_ketcher import st_ketcher
