@@ -1,5 +1,4 @@
-url = f"https://docs.google.com/spreadsheets/d/1x1z3l-Hxcx5mwkTYM_AVaqzHt7nBfOOWQphnaoTAkLY/edit?usp=sharing"
-df = pd.read_csv(url, dtype=str)
+
 import streamlit as st
 import pandas as pd
 
@@ -8,10 +7,8 @@ st.set_page_config(page_title="Python Talks Search Engine", page_icon="🐍", la
 st.title("Python Talks Search Engine")
 
 # Connect to the Google Sheet
-sheet_id = "1nctiWcQFaB5UlIs6z8d1O6ZgMHFDMAoo3twVxYnBUws"
-sheet_name = "charlas"
-url = f"<https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}>"
-df = pd.read_csv(url, dtype=str).fillna("")
+url = f"https://docs.google.com/spreadsheets/d/1x1z3l-Hxcx5mwkTYM_AVaqzHt7nBfOOWQphnaoTAkLY/edit?usp=sharing"
+df = pd.read_csv(url, dtype=str)
 
 # Show the dataframe (we'll delete this later)
 st.write(df)
