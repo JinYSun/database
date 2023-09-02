@@ -13,3 +13,9 @@ df = pd.read_csv(url, dtype=str, encoding='utf-8')
 df1 = pd.read_csv(url1, dtype=str, encoding='utf-8')
 edited_df = st.data_editor(df1, num_rows="dynamic")
 
+import streamlit as st
+from streamlit_ketcher import st_ketcher
+
+molecule = st.text_input("Molecule", DEFAULT_MOL)
+smile_code = st_ketcher(molecule)
+st.markdown(f"Smile code: ``{smile_code}``")
