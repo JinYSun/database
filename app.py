@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import rdkit
+ 
 import streamlit_ketcher
 from streamlit_ketcher import st_ketcher
 
