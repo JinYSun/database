@@ -1,7 +1,7 @@
 altair
 pandas
 rdkit
-sklearn
+scikit-learn
 os
 streamlit
 streamlit-ketcher
