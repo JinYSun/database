@@ -1,8 +1,9 @@
 altair
 pandas
-streamlit
-streamlit-ketcher
-tensorflow
 rdkit
 sklearn
 os
+streamlit
+streamlit-ketcher
+tensorflow
+
