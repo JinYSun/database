@@ -6,5 +6,5 @@ pandas
 rdkit
 scikit-learn
 matplotlib
-
+st-gsheets-connection
 

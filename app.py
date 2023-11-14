@@ -6,6 +6,7 @@ import streamlit_ketcher
 from streamlit_ketcher import st_ketcher
 import abcBERT
 import RF
+from streamlit_gsheets import GSheetsConnection
 
 # Page setup
 st.set_page_config(page_title="DeepAcceptor", page_icon="🔋", layout="wide")
