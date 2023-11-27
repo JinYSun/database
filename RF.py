@@ -205,5 +205,3 @@ def edit_dataset(drug,non_drug,task):
     dataset_test=pd.concat([ dataset_test_drug,dataset_test_no], axis=0)
   #  dataset_dev = dataset_dev_drug+dataset_dev_no
     return dataset_train, dataset_test
-if __name__ == "__main__":
-    x = main("CCCCCCC1=CC=C(C2(C3=CC=C(CCCCCC)C=C3)C3=CC4=C(C=C3C3=C2C=C(/C=C2\SC(=S)N(CC)C2=O)S3)C(C2=CC=C(CCCCCC)C=C2)(C2=CC=C(CCCCCC)C=C2)C2=C4SC(/C=C3\SC(=S)N(CC)C3=O)=C2)C=C1")
