@@ -18,7 +18,7 @@ url = r"https://docs.google.com/spreadsheets/d/1YOEIg0nMTSPkAOr8wkqxQRLuUhys3-J0
 df1 = pd.read_csv(url1, dtype=str, encoding='utf-8')
 col1, col2 = st.columns(2)
 with col1:
-	st.header("🔍**Search papers or molecules**")
+	st.subheader("🔍**Search papers or molecules**")
 	text_search = st.text_input(label="_", value="",label_visibility="hidden" )
 	m1 = df1["name"].str.contains(text_search)
 	m2 = df1["reference"].str.contains(text_search)
