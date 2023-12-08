@@ -35,17 +35,31 @@ edited_df.to_csv(url)
 st.download_button(
     "⬇️ Download edited files as .csv", edited_df.to_csv(), "edited_df.csv", use_container_width=True
 )
-st.header("📋**Molecule**")
-molecule = st.text_input(label="*",label_visibility="hidden")
+st.header("📋**Input the SMILES of Molecule**")
+col3, col4= st.columns(2)
+
+with col3:
+	
+	molecule = st.text_input(label="*",label_visibility="hidden")
+with col4:
+	st.markdown('👇An example of Y6.')
+	if st.button("🙋‍♂️**Example**"):
+    		molecule = 'O=C(C(C=C(F)C(F)=C1)=C1C/2=C(C#N)/C#N)C2=C/C3=C(CCCCCCCCCCC)C(S4)=C(S3)C5=C4C6=C(N5CC(CC)CCCC)C7=C(C(SC8=C9SC(/C=C%10C(C(C=C(F)C(F)=C%11)=C%11C\%10=C(C#N)C#N)=O)=C8CCCCCCCCCCC)=C9N7CC(CC)CCCC)C%12=NSN=C6%12'
+
 smile_code = st_ketcher(molecule)
 st.subheader(f"✨**Smiles code**: {smile_code}")
-try :
-	P = RF.main( str(smile_code ) )
-	st.subheader(f"⚡**PCE predicted by RF**: {P}")
-except:
-	st.subheader(f"⚡**PCE predicted by RF**: [Running]")
-try:
-    pce = abcBERT.main( str(smile_code ) )
-    st.subheader(f"⚡**PCE predicted by abcBERT**: {pce}")
-except:
-    st.subheader(f"⚡**PCE predicted by abcBERT**:  [Running]")
+mol = rdkit.Chem.MolFromSmiles(smile_code)
+if  mol is None:
+		st.subheader('**❗The SMILES is ERROR❗**')
+else:
+	try :
+		P = RF.main( str(smile_code ) )
+		st.subheader(f"⚡**PCE predicted by RF**: {P}")
+	except:
+
+		st.subheader(f"⚡**PCE predicted by RF**: [Running]")
+	try:
+		pce = abcBERT.main( str(smile_code ) )
+		st.subheader(f"⚡**PCE predicted by abcBERT**: {pce}")
+	except:
+		st.subheader(f"⚡**PCE predicted by abcBERT**:  [Running]")

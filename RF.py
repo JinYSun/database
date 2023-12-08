@@ -18,7 +18,7 @@ import math
 from scipy import sparse
 from sklearn.metrics import median_absolute_error,r2_score, mean_absolute_error,mean_squared_error
 import pickle
-
+from tqdm import tqdm
 
 import pandas as pd
 import matplotlib.pyplot as plt
